@@ -1,0 +1,26 @@
+{
+  "name": "hdt-template",
+  "version": "1.0.0",
+  "description": "A Heroku-Discord-Typescript ready template project to optimize your start",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "nodemon -e ts --exec \"npm run build && npm start\""
+  },
+  "keywords": [],
+  "author": "@LucasHBG",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.23.0",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.7.5"
+  }
+}
