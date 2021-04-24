@@ -1,4 +1,4 @@
-import { Client, RichEmbed } from "discord.js";
+import { Client, MessageEmbed } from "discord.js";
 
 /**
  * Create a unique style for your rich-embed
@@ -9,17 +9,17 @@ import { Client, RichEmbed } from "discord.js";
  * @param client library from discord.js
  */
 export function generateRichEmbed(title: string, client: Client) {
-  const avatarURL = client.user.avatarURL;
-  const richEmbed = new RichEmbed()
+  const avatarURL = client.user?.displayAvatarURL();
+  const messageEmbed = new MessageEmbed()
     .setColor("#4848FF")
     .setTitle(title)
-    .setFooter("Made by @LucasHBG")
+    .setFooter("Made by 4Queijos's lovely programmer")
     .setTimestamp();
 
-  richEmbed.author = {
-    name: client.user.username,
-    icon_url: avatarURL,
+    messageEmbed.author = {
+    name: client.user?.username,
+    iconURL: avatarURL,
   };
 
-  return richEmbed;
+  return messageEmbed;
 }
